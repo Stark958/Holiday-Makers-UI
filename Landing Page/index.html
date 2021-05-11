@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Holiday Makers</title>
+  </head>
+  <body>
+    <section id="">
+      <header>
+        <a href="index.html" class="logo">Holiday Makers</a>
+        <div class="toggle" onclick="toggleMenu()"></div>
+        <ul class="navigation">
+          <li><a href="#" style="--i: 1">Explore</a></li>
+          <li><a href="#" style="--i: 2">Profile</a></li>
+          <li><a href="#" style="--i: 3">About us</a></li>
+          <li><a href="#" style="--i: 4">Contact us</a></li>
+        </ul>
+      </header>
+      <div class="container">
+        <div class="box" style="--i: 2">
+          <div class="imgBx">
+            <div class="info">
+              <h1 class="pack_title">Manali</h1>
+            </div>
+            <img src="1.jpg" />
+          </div>
+        </div>
+        <div class="box" style="--i: 3">
+          <div class="imgBx">
+            <div class="info">
+              <h1 class="pack_title">Goa</h1>
+            </div>
+            <img src="2.jpg" />
+          </div>
+        </div>
+        <div class="box" style="--i: 4">
+          <div class="imgBx">
+            <div class="info">
+              <h1 class="pack_title">Himalayas</h1>
+            </div>
+            <img src="3.jpg" />
+          </div>
+        </div>
+        <div class="box" style="--i: 5">
+          <div class="imgBx">
+            <div class="info">
+              <h1 class="pack_title">Maldives</h1>
+            </div>
+            <img src="4.jpg" />
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <ul class="sci">
+          <li><a href="#" style="--i: 8">Facebook</a></li>
+          <li><a href="#" style="--i: 7">Youtube</a></li>
+          <li><a href="#" style="--i: 6">Instagram</a></li>
+        </ul>
+        <p class="copyrightText">&copy;Cognizant</p>
+      </div>
+    </section>
+
+    <script>
+      let imgBx = document.querySelectorAll(".imgBx");
+      imgBx.forEach(popup =>
+        popup.addEventListener("click", () => {
+          popup.classList.toggle("active");
+        })
+      );
+
+      function toggleMenu() {
+        const menuToggle = document.querySelector(".toggle");
+        const navigation = document.querySelector(".navigation");
+        menuToggle.classList.toggle("active");
+        navigation.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
